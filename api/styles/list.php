@@ -4,11 +4,15 @@ declare(strict_types=1);
 require_once dirname(__DIR__, 2) . '/includes/db.php';
 require_once dirname(__DIR__, 2) . '/includes/response.php';
 require_once dirname(__DIR__, 2) . '/includes/auth.php';
+require_once dirname(__DIR__, 2) . '/services/ThemeEngineService.php';
 
 MelvoreResponse::requireMethod('GET');
 
 try {
     $pdo = MelvoreDB::pdo();
+    $userId = MelvoreAuth::getCurrentUserId();
+    $guestId = MelvoreAuth::getGuestId();
+
     if (!MelvoreDB::tableExists('app_style_worlds')) {
         MelvoreResponse::ok(['style_worlds' => []], 'Style worlds unavailable');
     }
@@ -33,45 +37,26 @@ try {
         }
     }
 
+    $submittedWorldIds = [];
+    if (($userId !== null || $guestId !== '') && MelvoreDB::tableExists('app_style_world_feedback')) {
+        $fSql = $userId !== null
+            ? 'SELECT style_world_id FROM app_style_world_feedback WHERE user_id = ?'
+            : 'SELECT style_world_id FROM app_style_world_feedback WHERE guest_id = ?';
+        $fStmt = $pdo->prepare($fSql);
+        $fStmt->execute([$userId ?? $guestId]);
+        $submittedWorldIds = array_map('intval', $fStmt->fetchAll(PDO::FETCH_COLUMN));
+    }
+
     $worlds = [];
     foreach ($rows as $row) {
         $wid = (int)($row['style_world_id'] ?? ($row['id'] ?? 0));
-        $themeCfg = [];
-        if (!empty($row['theme_config'])) {
-            $decoded = is_string($row['theme_config']) ? json_decode($row['theme_config'], true) : $row['theme_config'];
-            if (is_array($decoded)) {
-                $themeCfg = $decoded;
-            }
-        }
-        $worlds[] = [
-            'style_world_id' => $wid,
-            'slug' => (string)($row['slug'] ?? ''),
-            'name' => (string)($row['name'] ?? ''),
-            'tagline' => (string)($row['tagline'] ?? ''),
-            'description' => (string)($row['description'] ?? ''),
-            'theme_key' => (string)($row['theme_key'] ?? 'dark_editorial'),
-            'animation_key' => (string)($row['animation_key'] ?? 'smooth_reveal'),
-            'font_style' => (string)($row['font_style'] ?? 'editorial_serif'),
-            'primary_color' => (string)($row['primary_color'] ?? '#FFFFFF'),
-            'accent_color' => (string)($row['accent_color'] ?? '#C8CCD4'),
-            'background_color' => (string)($row['background_color'] ?? '#0A0A0D'),
-            'cover_image_url' => MelvoreResponse::mediaUrl($row['cover_image_url'] ?? ($row['hero_image_url'] ?? null)),
-            'mobile_image_url' => MelvoreResponse::mediaUrl($row['mobile_image_url'] ?? ($row['cover_image_url'] ?? null)),
-            'video_url' => MelvoreResponse::mediaUrl($row['video_url'] ?? null),
-            'product_count' => $counts[$wid] ?? 0,
-            'theme_config' => $themeCfg,
-        ];
+        $formatted = MelvoreThemeEngineService::formatWorldTheme($row);
+        $formatted['product_count'] = $counts[$wid] ?? 0;
+        $formatted['has_submitted_feedback'] = in_array($wid, $submittedWorldIds, true);
+        $worlds[] = $formatted;
     }
 
     MelvoreResponse::ok(['style_worlds' => $worlds], 'Style worlds loaded');
 } catch (Throwable $e) {
-    error_log('[MELVORE STYLES ERROR] ' . $e->getMessage());
-    error_log('[MELVORE STYLES FILE] ' . $e->getFile());
-    error_log('[MELVORE STYLES LINE] ' . $e->getLine());
-
-    MelvoreResponse::error(
-        'Unable to load style worlds.',
-        'SERVER_ERROR',
-        500
-    );
+    MelvoreResponse::error('Unable to load style worlds.', 'SERVER_ERROR', 500);
 }

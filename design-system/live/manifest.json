@@ -698,150 +698,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/y2k/button.svg",
@@ -959,118 +959,118 @@
             "tile_alerts": "/design-system/assets/svg/worlds_v3/y2k/widgets/tile_alerts.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12
@@ -1250,150 +1250,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/goth/button.svg",
@@ -1511,118 +1511,118 @@
             "tile_alerts": "/design-system/assets/svg/worlds_v3/goth/widgets/tile_alerts.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12
@@ -1794,150 +1794,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/coquette/button.svg",
@@ -2055,118 +2055,118 @@
             "tile_alerts": "/design-system/assets/svg/worlds_v3/coquette/widgets/tile_alerts.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12
@@ -2338,150 +2338,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/streetwear/button.svg",
@@ -2599,118 +2599,118 @@
             "tile_alerts": "/design-system/assets/svg/worlds_v3/streetwear/widgets/tile_alerts.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12
@@ -2877,150 +2877,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/k-fashion/button.svg",
@@ -3138,118 +3138,118 @@
             "tile_alerts": "/design-system/assets/svg/worlds_v3/k-fashion/widgets/tile_alerts.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12
@@ -3410,150 +3410,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/quiet-luxury/button.svg",
@@ -3671,118 +3671,118 @@
             "tile_alerts": "/design-system/assets/svg/worlds_v3/quiet-luxury/widgets/tile_alerts.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12
@@ -3971,150 +3971,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/pixel/button.svg",
@@ -4234,118 +4234,118 @@
             "title_block": "/design-system/assets/svg/worlds_v3/pixel/widgets/title_block.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12
@@ -4508,150 +4508,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/minimal/button.svg",
@@ -4769,118 +4769,118 @@
             "tile_alerts": "/design-system/assets/svg/worlds_v3/minimal/widgets/tile_alerts.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12
@@ -5048,150 +5048,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/grunge/button.svg",
@@ -5309,118 +5309,118 @@
             "tile_alerts": "/design-system/assets/svg/worlds_v3/grunge/widgets/tile_alerts.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12
@@ -5588,150 +5588,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/old-money/button.svg",
@@ -5849,118 +5849,118 @@
             "tile_alerts": "/design-system/assets/svg/worlds_v3/old-money/widgets/tile_alerts.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12
@@ -6128,150 +6128,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/casual/button.svg",
@@ -6389,118 +6389,118 @@
             "tile_alerts": "/design-system/assets/svg/worlds_v3/casual/widgets/tile_alerts.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12
@@ -6672,150 +6672,150 @@
         "v2": {
           "version": "1.6.0",
           "sizes": {
-            "button": [
-              320.0,
-              60.0
-            ],
-            "button_ghost": [
-              320.0,
-              60.0
-            ],
-            "button_tonal": [
-              320.0,
-              60.0
-            ],
-            "button_compact": [
-              150.0,
-              44.0
-            ],
-            "fab": [
-              76.0,
-              76.0
-            ],
-            "navbar": [
-              390.0,
-              76.0
-            ],
-            "navbar_floating": [
-              390.0,
-              96.0
-            ],
-            "navbar_dock": [
-              390.0,
-              88.0
-            ],
-            "nav_indicator": [
-              78.0,
-              14.0
-            ],
-            "nav_indicator_pill": [
-              64.0,
-              36.0
-            ],
-            "nav_indicator_pulse": [
-              40.0,
-              40.0
-            ],
-            "slider": [
-              320.0,
-              44.0
-            ],
-            "slider_range": [
-              320.0,
-              70.0
-            ],
-            "slider_steps": [
-              320.0,
-              52.0
-            ],
-            "pager": [
-              132.0,
-              24.0
-            ],
-            "pager_line": [
-              180.0,
-              16.0
-            ],
-            "pager_motif": [
-              120.0,
-              36.0
-            ],
-            "loader": [
-              72.0,
-              72.0
-            ],
-            "loader_bar": [
-              220.0,
-              24.0
-            ],
-            "loader_skeleton": [
-              240.0,
-              150.0
-            ],
-            "toggle": [
-              72.0,
-              40.0
-            ],
-            "checkbox": [
-              36.0,
-              36.0
-            ],
-            "radio": [
-              36.0,
-              36.0
-            ],
-            "chip": [
-              116.0,
-              40.0
-            ],
-            "badge_count": [
-              28.0,
-              28.0
-            ],
-            "badge_new": [
-              72.0,
-              28.0
-            ],
-            "badge_sale": [
-              84.0,
-              84.0
-            ],
-            "toast": [
-              360.0,
-              76.0
-            ],
-            "divider": [
-              320.0,
-              24.0
-            ],
-            "divider_dots": [
-              320.0,
-              24.0
-            ],
-            "rating": [
-              132.0,
-              28.0
-            ],
-            "search_bar": [
-              340.0,
-              52.0
-            ],
-            "stepper": [
-              132.0,
-              44.0
-            ],
-            "price_tag": [
-              104.0,
-              40.0
-            ],
-            "card_frame": [
-              200.0,
-              260.0
-            ],
-            "card_frame_tag": [
-              200.0,
-              260.0
-            ]
+            "button": {
+              "width": 320,
+              "height": 60
+            },
+            "button_ghost": {
+              "width": 320,
+              "height": 60
+            },
+            "button_tonal": {
+              "width": 320,
+              "height": 60
+            },
+            "button_compact": {
+              "width": 150,
+              "height": 44
+            },
+            "fab": {
+              "width": 76,
+              "height": 76
+            },
+            "navbar": {
+              "width": 390,
+              "height": 76
+            },
+            "navbar_floating": {
+              "width": 390,
+              "height": 96
+            },
+            "navbar_dock": {
+              "width": 390,
+              "height": 88
+            },
+            "nav_indicator": {
+              "width": 78,
+              "height": 14
+            },
+            "nav_indicator_pill": {
+              "width": 64,
+              "height": 36
+            },
+            "nav_indicator_pulse": {
+              "width": 40,
+              "height": 40
+            },
+            "slider": {
+              "width": 320,
+              "height": 44
+            },
+            "slider_range": {
+              "width": 320,
+              "height": 70
+            },
+            "slider_steps": {
+              "width": 320,
+              "height": 52
+            },
+            "pager": {
+              "width": 132,
+              "height": 24
+            },
+            "pager_line": {
+              "width": 180,
+              "height": 16
+            },
+            "pager_motif": {
+              "width": 120,
+              "height": 36
+            },
+            "loader": {
+              "width": 72,
+              "height": 72
+            },
+            "loader_bar": {
+              "width": 220,
+              "height": 24
+            },
+            "loader_skeleton": {
+              "width": 240,
+              "height": 150
+            },
+            "toggle": {
+              "width": 72,
+              "height": 40
+            },
+            "checkbox": {
+              "width": 36,
+              "height": 36
+            },
+            "radio": {
+              "width": 36,
+              "height": 36
+            },
+            "chip": {
+              "width": 116,
+              "height": 40
+            },
+            "badge_count": {
+              "width": 28,
+              "height": 28
+            },
+            "badge_new": {
+              "width": 72,
+              "height": 28
+            },
+            "badge_sale": {
+              "width": 84,
+              "height": 84
+            },
+            "toast": {
+              "width": 360,
+              "height": 76
+            },
+            "divider": {
+              "width": 320,
+              "height": 24
+            },
+            "divider_dots": {
+              "width": 320,
+              "height": 24
+            },
+            "rating": {
+              "width": 132,
+              "height": 28
+            },
+            "search_bar": {
+              "width": 340,
+              "height": 52
+            },
+            "stepper": {
+              "width": 132,
+              "height": 44
+            },
+            "price_tag": {
+              "width": 104,
+              "height": 40
+            },
+            "card_frame": {
+              "width": 200,
+              "height": 260
+            },
+            "card_frame_tag": {
+              "width": 200,
+              "height": 260
+            }
           },
           "components": {
             "button": "/design-system/assets/svg/worlds_v2/party-wear/button.svg",
@@ -6933,118 +6933,118 @@
             "tile_alerts": "/design-system/assets/svg/worlds_v3/party-wear/widgets/tile_alerts.svg"
           },
           "widget_sizes": {
-            "bg_ambient": [
-              390,
-              844
-            ],
-            "status_bar": [
-              390,
-              44
-            ],
-            "topbar": [
-              390,
-              60
-            ],
-            "search": [
-              350,
-              48
-            ],
-            "chips_row": [
-              440,
-              36
-            ],
-            "banner": [
-              350,
-              118
-            ],
-            "section_header": [
-              390,
-              30
-            ],
-            "product_card": [
-              168,
-              214
-            ],
-            "coupon": [
-              350,
-              62
-            ],
-            "order_steps": [
-              390,
-              60
-            ],
-            "cta_add_to_bag": [
-              350,
-              58
-            ],
-            "nav_live": [
-              358,
-              64
-            ],
-            "hero_art": [
-              390,
-              400
-            ],
-            "title_block": [
-              390,
-              170
-            ],
-            "date_strip": [
-              390,
-              80
-            ],
-            "player": [
-              350,
-              80
-            ],
-            "tile_bag": [
-              164,
-              64
-            ],
-            "tile_wishlist": [
-              164,
-              64
-            ],
-            "tile_discover": [
-              164,
-              64
-            ],
-            "tile_alerts": [
-              164,
-              64
-            ],
-            "os_window": [
-              350,
-              148
-            ],
-            "angel_tile": [
-              160,
-              190
-            ],
-            "icon_tile_mon": [
-              80,
-              100
-            ],
-            "icon_tile_hrt": [
-              80,
-              100
-            ],
-            "icon_tile_hgl": [
-              80,
-              100
-            ],
-            "icon_tile_cd": [
-              80,
-              100
-            ],
-            "cd_player": [
-              356,
-              166
-            ],
-            "dock": [
-              338,
-              120
-            ]
+            "bg_ambient": {
+              "width": 390,
+              "height": 844
+            },
+            "status_bar": {
+              "width": 390,
+              "height": 44
+            },
+            "topbar": {
+              "width": 390,
+              "height": 60
+            },
+            "search": {
+              "width": 350,
+              "height": 48
+            },
+            "chips_row": {
+              "width": 440,
+              "height": 36
+            },
+            "banner": {
+              "width": 350,
+              "height": 118
+            },
+            "section_header": {
+              "width": 390,
+              "height": 30
+            },
+            "product_card": {
+              "width": 168,
+              "height": 214
+            },
+            "coupon": {
+              "width": 350,
+              "height": 62
+            },
+            "order_steps": {
+              "width": 390,
+              "height": 60
+            },
+            "cta_add_to_bag": {
+              "width": 350,
+              "height": 58
+            },
+            "nav_live": {
+              "width": 358,
+              "height": 64
+            },
+            "hero_art": {
+              "width": 390,
+              "height": 400
+            },
+            "title_block": {
+              "width": 390,
+              "height": 170
+            },
+            "date_strip": {
+              "width": 390,
+              "height": 80
+            },
+            "player": {
+              "width": 350,
+              "height": 80
+            },
+            "tile_bag": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_wishlist": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_discover": {
+              "width": 164,
+              "height": 64
+            },
+            "tile_alerts": {
+              "width": 164,
+              "height": 64
+            },
+            "os_window": {
+              "width": 350,
+              "height": 148
+            },
+            "angel_tile": {
+              "width": 160,
+              "height": 190
+            },
+            "icon_tile_mon": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hrt": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_hgl": {
+              "width": 80,
+              "height": 100
+            },
+            "icon_tile_cd": {
+              "width": 80,
+              "height": 100
+            },
+            "cd_player": {
+              "width": 356,
+              "height": 166
+            },
+            "dock": {
+              "width": 338,
+              "height": 120
+            }
           },
           "animation": "smil",
           "loop_seconds": 12

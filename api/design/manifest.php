@@ -1,39 +1,66 @@
 <?php
 declare(strict_types=1);
 
+require_once dirname(__DIR__, 2) . '/includes/db.php';
 require_once dirname(__DIR__, 2) . '/includes/response.php';
+require_once dirname(__DIR__, 2) . '/services/DesignSystemService.php';
+require_once dirname(__DIR__, 2) . '/services/ThemeEngineService.php';
 
 MelvoreResponse::requireMethod('GET');
 
-// Serves the remote design manifest (tokens, worlds, UI kit v2/v3 asset paths).
-// Query: slot=live|default (default live). Supports ETag / If-None-Match.
-$slot = strtolower(trim((string)($_GET['slot'] ?? 'live')));
-if (!in_array($slot, ['live', 'default'], true)) {
-    $slot = 'live';
+try {
+    $pdo = MelvoreDB::pdo();
+    $appSchema = trim((string)($_GET['schema_version'] ?? ($_GET['app_schema_version'] ?? MelvoreDesignSystemService::SUPPORTED_SCHEMA_VERSION)));
+    $worldSlug = trim((string)($_GET['world_slug'] ?? ''));
+    $country = trim((string)($_GET['country'] ?? 'India'));
+    $state = trim((string)($_GET['state'] ?? ''));
+    $city = trim((string)($_GET['city'] ?? ''));
+
+    // Public endpoints ALWAYS serve published active_design only (never drafts or simulated dates)
+    $resolved = MelvoreDesignSystemService::resolvePublishedManifest($pdo, null, $appSchema);
+    $etag = $resolved['etag'];
+    header('ETag: ' . $etag);
+    header('Cache-Control: public, max-age=30, must-revalidate');
+
+    $ifNoneMatch = trim((string)($_SERVER['HTTP_IF_NONE_MATCH'] ?? ''));
+    $unchanged = ($ifNoneMatch !== '' && hash_equals($etag, $ifNoneMatch));
+
+    // Where /design-system/assets/... lives. Defaults to this API's own origin.
+    $assetBase = rtrim(MelvoreEnv::get('DESIGN_ASSET_BASE_URL', ''), '/');
+    if ($assetBase === '') {
+        $https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+            || strtolower((string)($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')) === 'https';
+        $assetBase = ($https ? 'https' : 'http') . '://' . (string)($_SERVER['HTTP_HOST'] ?? 'app.melvore.co.in');
+    }
+
+    $occasions = MelvoreThemeEngineService::fetchActiveOccasions($pdo, $country, $state, $city);
+    $activeOccasion = $occasions[0] ?? null;
+
+    $worldOverride = null;
+    if ($worldSlug !== '') {
+        $worldOverride = $resolved['manifest']['worlds'][strtolower($worldSlug)] ?? null;
+    }
+
+    MelvoreResponse::ok([
+        'active_design' => $resolved['active_design'],
+        'slot' => $resolved['resolved_slot'],
+        'design_version' => (string)($resolved['manifest']['design_version'] ?? '1.0.0'),
+        'schema_version' => (string)($resolved['manifest']['schema_version'] ?? '1.0.0'),
+        'min_app_schema_version' => (string)($resolved['manifest']['min_app_schema_version'] ?? '1.0.0'),
+        'checksum_sha256' => $resolved['checksum_sha256'],
+        'etag' => $etag,
+        'manifest_hash' => $resolved['checksum_sha256'],
+        'asset_base_url' => $assetBase,
+        'unchanged' => $unchanged,
+        'fallback_used' => $resolved['fallback_used'],
+        'fallback_reason' => $resolved['fallback_reason'],
+        'server_time_ist' => (new DateTimeImmutable('now', new DateTimeZone('Asia/Kolkata')))->format('c'),
+        'priority_order' => ['default_manifest', 'active_design_switch', 'style_world', 'active_occasion', 'component_override'],
+        'active_occasion' => $activeOccasion,
+        'world_override' => $worldOverride,
+        'manifest' => $unchanged ? null : $resolved['manifest'],
+    ], $unchanged ? 'Design manifest unchanged' : 'Active design manifest resolved');
+} catch (Throwable $e) {
+    error_log('[Melvore][design/manifest] Exception: ' . $e->getMessage());
+    MelvoreResponse::error('Unable to resolve design manifest.', 'SERVER_ERROR', 500);
 }
-$root = dirname(__DIR__, 2) . '/design-system';
-$file = $root . '/' . $slot . '/manifest.json';
-if (!is_file($file)) {
-    $file = $root . '/default/manifest.json';
-}
-if (!is_file($file)) {
-    MelvoreResponse::error('Design manifest not found.', 'NOT_FOUND', 404);
-}
-$raw = (string)file_get_contents($file);
-$manifest = json_decode($raw, true);
-if (!is_array($manifest)) {
-    MelvoreResponse::error('Design manifest is invalid.', 'SERVER_ERROR', 500);
-}
-$etag = '"' . sha1($raw) . '"';
-header('ETag: ' . $etag);
-header('Cache-Control: public, max-age=300');
-if (trim((string)($_SERVER['HTTP_IF_NONE_MATCH'] ?? '')) === $etag) {
-    http_response_code(304);
-    exit;
-}
-$base = rtrim((string)MelvoreEnv::get('ASSET_BASE_URL', MelvoreEnv::get('STOREFRONT_BASE_URL', '')), '/');
-MelvoreResponse::ok([
-    'manifest' => $manifest,
-    'manifest_hash' => sha1($raw),
-    'asset_base_url' => $base,
-], 'Design manifest loaded');

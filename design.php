@@ -58,38 +58,58 @@ try {
 
     $heroSlides = [];
     if (($section === 'all' || $section === 'hero') && MelvoreDB::tableExists('hero_content')) {
-        foreach ($pdo->query('SELECT * FROM hero_content WHERE is_active = 1 ORDER BY display_order ASC, id ASC')->fetchAll() as $r) {
+        foreach ($pdo->query('SELECT * FROM hero_content')->fetchAll() as $r) {
+            $isActiveFlag = array_key_exists('is_active', $r)
+                ? ((int)$r['is_active'] === 1)
+                : (!array_key_exists('status', $r) || strtolower((string)$r['status']) === 'active');
+            if (!$isActiveFlag) {
+                continue;
+            }
+            $primaryImg = $r['image_url'] ?? ($r['desktop_image_url'] ?? ($r['image'] ?? ($r['banner_image'] ?? ($r['desktop_image'] ?? ($r['img_src'] ?? null)))));
             $heroSlides[] = [
-                'id' => (int)$r['id'],
-                'title' => (string)($r['title'] ?? ''),
-                'subtitle' => (string)($r['subtitle'] ?? ''),
-                'eyebrow' => (string)($r['eyebrow'] ?? ''),
-                'image_url' => MelvoreResponse::mediaUrl($r['image_url'] ?? null),
-                'mobile_image_url' => MelvoreResponse::mediaUrl($r['mobile_image_url'] ?? null),
-                'desktop_image_url' => MelvoreResponse::mediaUrl($r['desktop_image_url'] ?? null),
-                'cta_text' => (string)($r['cta_text'] ?? ''),
-                'cta_link' => (string)($r['cta_link'] ?? ''),
-                'display_order' => (int)($r['display_order'] ?? 0),
+                'id' => (int)($r['id'] ?? ($r['hero_id'] ?? 0)),
+                'title' => (string)($r['title'] ?? ($r['heading'] ?? '')),
+                'subtitle' => (string)($r['subtitle'] ?? ($r['description'] ?? '')),
+                'eyebrow' => (string)($r['eyebrow'] ?? ($r['badge_text'] ?? '')),
+                'image_url' => MelvoreResponse::mediaUrl($primaryImg),
+                'mobile_image_url' => MelvoreResponse::mediaUrl($r['mobile_image_url'] ?? ($r['mobile_image'] ?? $primaryImg)),
+                'desktop_image_url' => MelvoreResponse::mediaUrl($r['desktop_image_url'] ?? ($r['desktop_image'] ?? $primaryImg)),
+                'cta_text' => (string)($r['cta_text'] ?? ($r['button_text'] ?? '')),
+                'cta_link' => (string)($r['cta_link'] ?? ($r['button_link'] ?? '')),
+                'display_order' => (int)($r['display_order'] ?? ($r['sort_order'] ?? 0)),
                 'is_active' => true,
             ];
         }
+        usort($heroSlides, static fn(array $a, array $b): int => ($a['display_order'] <=> $b['display_order']) ?: ($a['id'] <=> $b['id']));
     }
 
     $banners = [];
     if (($section === 'all' || $section === 'banners') && MelvoreDB::tableExists('banner_content')) {
-        foreach ($pdo->query('SELECT * FROM banner_content WHERE is_active = 1 ORDER BY display_order ASC LIMIT 12')->fetchAll() as $b) {
+        foreach ($pdo->query('SELECT * FROM banner_content')->fetchAll() as $b) {
+            $bActive = array_key_exists('is_active', $b)
+                ? ((int)$b['is_active'] === 1)
+                : (!array_key_exists('status', $b) || strtolower((string)$b['status']) === 'active');
+            if (!$bActive) {
+                continue;
+            }
             $banners[] = [
                 'banner_id' => (int)($b['banner_id'] ?? ($b['id'] ?? 0)),
                 'title' => (string)($b['title'] ?? ($b['heading'] ?? '')),
                 'subtitle' => (string)($b['subtitle'] ?? ($b['description'] ?? '')),
                 'tag' => (string)($b['tag'] ?? ($b['badge_text'] ?? '')),
-                'image_url' => MelvoreResponse::mediaUrl($b['image_url'] ?? ($b['banner_image'] ?? null)),
+                'image_url' => MelvoreResponse::mediaUrl($b['image_url'] ?? ($b['banner_image'] ?? ($b['image'] ?? null))),
                 'cta_text' => (string)($b['cta_text'] ?? 'Shop Edit'),
                 'cta_link' => (string)($b['cta_link'] ?? ''),
                 'filter_tag' => (string)($b['filter_tag'] ?? ''),
                 'position' => (string)($b['position'] ?? 'home'),
+                '_order' => (int)($b['display_order'] ?? ($b['sort_order'] ?? 0)),
             ];
         }
+        usort($banners, static fn(array $a, array $b): int => ($a['_order'] <=> $b['_order']) ?: ($a['banner_id'] <=> $b['banner_id']));
+        $banners = array_slice(array_map(static function (array $item): array {
+            unset($item['_order']);
+            return $item;
+        }, $banners), 0, 12);
     }
 
     $marquee = [];

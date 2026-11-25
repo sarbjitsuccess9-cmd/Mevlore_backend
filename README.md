@@ -29,11 +29,9 @@ Drop-in PHP 8.3 + PDO (`MySQL` / `MariaDB`) REST API modules built for `https://
 - `GET /api/reviews/list.php`, `POST /api/reviews/request_otp.php`, `POST /api/reviews/verify_otp.php`, `POST /api/reviews/create.php`, `POST /api/reviews/helpful.php`, `POST /api/reviews/upload_media.php`
 - `GET /api/help/topics.php`, `GET /api/help/flow.php`, `POST /api/help/session.php`, `POST /api/support/upload_media.php`
 
-## Design manifest endpoint (added)
-`GET /api/design/manifest.php?slot=live|default` returns `{manifest, manifest_hash, asset_base_url}` with ETag/304 support.
-Manifest asset paths (e.g. `/design-system/assets/svg/worlds_v3/<world>/layouts/home.svg`) are served statically; the app prefixes them with `asset_base_url` (falls back to the API host).
-
-## Setup notes
-- Copy `.env.example` to `.env` on the server and fill the values. **Never commit `.env`.**
-- PHP service classes live in `services/` (they were previously nested under `docs/services/`).
-- Import SQL in order: `sql/migrations/002_*.sql`, then `sql/seeds/002_*.sql`.
+## Design system v1.6.0 (animated UI kit, 12 worlds)
+- Deploy the whole `design-system/` folder next to `api/` (it contains `live/manifest.json` and `assets/svg/worlds_v2|v3`).
+- Run `sql/melvore_activate_design_v1_6_0.sql` once so the live slot is active.
+- `GET /api/design/manifest.php` now returns `manifest_hash` and `asset_base_url`; the app resolves kit SVG paths against it.
+- Kit sizes are `{ "width": n, "height": n }` objects (the Android client also accepts `[w, h]`).
+- Never commit `.env`; copy `.env.example` on the server.

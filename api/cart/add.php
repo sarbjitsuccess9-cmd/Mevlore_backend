@@ -6,6 +6,7 @@ require_once dirname(__DIR__, 2) . '/includes/response.php';
 require_once dirname(__DIR__, 2) . '/includes/auth.php';
 require_once dirname(__DIR__, 2) . '/services/CartHelper.php';
 require_once dirname(__DIR__, 2) . '/services/PricingEngine.php';
+require_once dirname(__DIR__, 2) . '/services/RecommendationService.php';
 
 MelvoreResponse::requireMethod('POST');
 
@@ -85,6 +86,8 @@ try {
             $ins->execute([$guestId, $productId, $variationId, min($availStock, $quantity), $color, $size]);
         }
     }
+
+    MelvoreRecommendationService::invalidateForActor($pdo, $userId, $guestId);
 
     $items = MelvoreCartHelper::fetchCartItems($pdo, $userId, $guestId);
     $summary = MelvorePricingEngine::calculateTotals($pdo, $items, '', 'online', $userId);

@@ -6,6 +6,7 @@ require_once dirname(__DIR__, 2) . '/includes/response.php';
 require_once dirname(__DIR__, 2) . '/includes/auth.php';
 require_once dirname(__DIR__, 2) . '/services/CartHelper.php';
 require_once dirname(__DIR__, 2) . '/services/PricingEngine.php';
+require_once dirname(__DIR__, 2) . '/services/RecommendationService.php';
 
 MelvoreResponse::requireMethod('POST');
 
@@ -246,6 +247,7 @@ try {
     }
 
     $pdo->commit();
+    MelvoreRecommendationService::invalidateForActor($pdo, $userId, $guestId);
     MelvoreResponse::okFlat($orderPayload, 'Order created', 201);
 } catch (Throwable $e) {
     if (isset($pdo) && $pdo->inTransaction()) {

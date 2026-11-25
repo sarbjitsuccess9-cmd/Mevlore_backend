@@ -15,9 +15,14 @@ try {
             $worlds[] = MelvoreThemeEngineService::formatWorldTheme($w);
         }
     }
+    $resolvedDesign = MelvoreDesignSystemService::resolvePublishedManifest($pdo);
     MelvoreResponse::ok([
         'config_version' => MelvoreThemeEngineService::computeConfigVersion($pdo),
-        'default_theme' => MelvoreThemeEngineService::loadDefaultTheme(),
+        'active_design' => $resolvedDesign['active_design'],
+        'design_slot' => $resolvedDesign['resolved_slot'],
+        'design_version' => (string)($resolvedDesign['manifest']['design_version'] ?? '1.0.0'),
+        'design_manifest' => $resolvedDesign['manifest'],
+        'default_theme' => MelvoreThemeEngineService::loadDefaultTheme($pdo),
         'worlds' => $worlds,
         'assets' => MelvoreThemeEngineService::fetchWorldAssets($pdo),
     ], 'Theme configuration loaded');

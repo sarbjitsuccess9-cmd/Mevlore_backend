@@ -1,15 +1,20 @@
-Options -Indexes
-
-# Block direct HTTP access to environment files, SQL dumps, logs, and token storage
-<FilesMatch "^\.(env|htaccess)|(\.sql|\.log|\.example)$">
-    Require all denied
-</FilesMatch>
-
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteRule ^(config|includes|logs|storage|sql)/ - [F,L]
-
-    # Pass Authorization Bearer headers cleanly under PHP-FPM / FastCGI on Hostinger
+    RewriteRule ^\.env$ - [F,L]
+    RewriteRule ^\.env\.example$ - [F,L]
+    RewriteRule ^sql/ - [F,L]
+    RewriteRule ^config/ - [F,L]
+    RewriteRule ^includes/ - [F,L]
+    RewriteRule ^services/ - [F,L]
     RewriteCond %{HTTP:Authorization} ^(.*)
     RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
 </IfModule>
+
+<FilesMatch "^\.(env|htaccess|gitignore)">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "DENY"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"

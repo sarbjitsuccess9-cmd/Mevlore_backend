@@ -4,6 +4,7 @@ declare(strict_types=1);
 require_once dirname(__DIR__, 2) . '/includes/db.php';
 require_once dirname(__DIR__, 2) . '/includes/response.php';
 require_once dirname(__DIR__, 2) . '/includes/auth.php';
+require_once dirname(__DIR__, 2) . '/services/RecommendationService.php';
 
 MelvoreResponse::requireMethod('POST');
 
@@ -22,6 +23,7 @@ try {
         $ins = $pdo->prepare('INSERT INTO wishlist (user_id, product_id) VALUES (?, ?)');
         $ins->execute([$userId, $productId]);
     }
+    MelvoreRecommendationService::invalidateForActor($pdo, $userId, '');
 
     $stmt = $pdo->prepare(
         'SELECT w.wishlist_id, w.product_id, p.sku, p.name, p.slug, p.special_icon,

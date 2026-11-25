@@ -13,6 +13,7 @@ try {
     if (MelvoreDB::tableExists('app_occasions')) {
         $stmt = $pdo->query('SELECT * FROM app_occasions ORDER BY priority DESC, occasion_id ASC');
         foreach ($stmt->fetchAll() as $row) {
+            $win = MelvoreThemeEngineService::computeOccasionWindow($row);
             $occasions[] = [
                 'occasion_id' => (int)$row['occasion_id'],
                 'slug' => (string)$row['slug'],
@@ -27,6 +28,14 @@ try {
                 'background_color' => (string)$row['background_color'],
                 'is_active' => ((int)$row['is_active']) === 1,
                 'priority' => (int)$row['priority'],
+                'event_date' => $win['event_date'],
+                'activation_days_before' => $win['activation_days_before'],
+                'activation_start_at' => $win['start_dt']?->format('Y-m-d H:i:s'),
+                'activation_end_at' => $win['end_dt']?->format('Y-m-d H:i:s'),
+                'timezone' => $win['timezone'],
+                'region_country' => (string)($row['region_country'] ?? 'ALL'),
+                'region_state' => (string)($row['region_state'] ?? ''),
+                'region_city' => (string)($row['region_city'] ?? ''),
                 'start_date' => $row['start_date'] ?? null,
                 'end_date' => $row['end_date'] ?? null,
             ];

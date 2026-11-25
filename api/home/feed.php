@@ -18,30 +18,35 @@ try {
     $city = trim((string)($_GET['city'] ?? ''));
     $pincode = trim((string)($_GET['pincode'] ?? ''));
 
-    // 1. Hero Slider (hero_content)
+    // 1. Hero Slider (hero_content — resilient against legacy or modern column names)
     $heroSlides = [];
     if (MelvoreDB::tableExists('hero_content')) {
-        $stmt = $pdo->query(
-            'SELECT id, eyebrow, title, subtitle, image_url, mobile_image_url, desktop_image_url, cta_text, cta_link, display_order, is_active
-             FROM hero_content
-             WHERE is_active = 1
-             ORDER BY display_order ASC, id ASC'
-        );
+        $stmt = $pdo->query('SELECT * FROM hero_content');
         foreach ($stmt->fetchAll() as $row) {
+            $isActiveFlag = array_key_exists('is_active', $row)
+                ? ((int)$row['is_active'] === 1)
+                : (!array_key_exists('status', $row) || strtolower((string)$row['status']) === 'active');
+            if (!$isActiveFlag) {
+                continue;
+            }
+            $primaryImg = $row['image_url'] ?? ($row['desktop_image_url'] ?? ($row['image'] ?? ($row['banner_image'] ?? ($row['desktop_image'] ?? ($row['img_src'] ?? null)))));
+            $mobileImg = $row['mobile_image_url'] ?? ($row['mobile_image'] ?? $primaryImg);
+            $desktopImg = $row['desktop_image_url'] ?? ($row['desktop_image'] ?? $primaryImg);
             $heroSlides[] = [
-                'id' => (int)$row['id'],
-                'eyebrow' => (string)($row['eyebrow'] ?? ''),
-                'title' => (string)($row['title'] ?? ''),
-                'subtitle' => (string)($row['subtitle'] ?? ''),
-                'image_url' => MelvoreResponse::mediaUrl($row['image_url'] ?? null),
-                'mobile_image_url' => MelvoreResponse::mediaUrl($row['mobile_image_url'] ?? null),
-                'desktop_image_url' => MelvoreResponse::mediaUrl($row['desktop_image_url'] ?? null),
-                'cta_text' => (string)($row['cta_text'] ?? ''),
-                'cta_link' => (string)($row['cta_link'] ?? ''),
-                'display_order' => (int)($row['display_order'] ?? 0),
+                'id' => (int)($row['id'] ?? ($row['hero_id'] ?? 0)),
+                'eyebrow' => (string)($row['eyebrow'] ?? ($row['badge_text'] ?? '')),
+                'title' => (string)($row['title'] ?? ($row['heading'] ?? '')),
+                'subtitle' => (string)($row['subtitle'] ?? ($row['description'] ?? '')),
+                'image_url' => MelvoreResponse::mediaUrl($primaryImg),
+                'mobile_image_url' => MelvoreResponse::mediaUrl($mobileImg),
+                'desktop_image_url' => MelvoreResponse::mediaUrl($desktopImg),
+                'cta_text' => (string)($row['cta_text'] ?? ($row['button_text'] ?? '')),
+                'cta_link' => (string)($row['cta_link'] ?? ($row['button_link'] ?? '')),
+                'display_order' => (int)($row['display_order'] ?? ($row['sort_order'] ?? 0)),
                 'is_active' => true,
             ];
         }
+        usort($heroSlides, static fn(array $a, array $b): int => ($a['display_order'] <=> $b['display_order']) ?: ($a['id'] <=> $b['id']));
     }
 
     // 2. Active Festival & Regional Campaigns (app_campaigns, app_campaign_regions, app_campaign_assets)
@@ -150,19 +155,32 @@ try {
         });
     }
 
-    // 3. Quick Category Navigation (categories table)
+    // 3. Quick Category Navigation & Editorial Category Discovery Index (categories table + app_category_editorial_configs)
     $categories = [];
     if (MelvoreDB::tableExists('categories')) {
-        $catStmt = $pdo->query(
-            "SELECT c.category_id, c.parent_id, c.name, c.slug, c.description, c.image, c.is_featured, c.display_order,
-                    COUNT(p.product_id) AS product_count
-             FROM categories c
-             LEFT JOIN products p ON p.category_id = c.category_id AND p.is_active = 1
-             WHERE c.status = 'active'
-             GROUP BY c.category_id
-             ORDER BY c.display_order ASC, c.is_featured DESC, c.name ASC"
-        );
+        $hasEdCat = MelvoreDB::tableExists('app_category_editorial_configs');
+        $catSql = $hasEdCat
+            ? "SELECT c.category_id, c.parent_id, c.name, c.slug, c.description, c.image, c.is_featured, c.display_order,
+                      COUNT(p.product_id) AS product_count,
+                      ec.motif_key, ec.editorial_badge, ec.editorial_subtitle, ec.accent_hex,
+                      ec.bg_hex, ec.animation_key, ec.tile_span, ec.cover_image_url AS editorial_cover_url,
+                      COALESCE(ec.display_order, c.display_order) AS effective_order
+               FROM categories c
+               LEFT JOIN products p ON p.category_id = c.category_id AND p.is_active = 1
+               LEFT JOIN app_category_editorial_configs ec ON ec.category_id = c.category_id AND ec.is_active = 1
+               WHERE c.status = 'active'
+               GROUP BY c.category_id
+               ORDER BY effective_order ASC, c.is_featured DESC, c.name ASC"
+            : "SELECT c.category_id, c.parent_id, c.name, c.slug, c.description, c.image, c.is_featured, c.display_order,
+                      COUNT(p.product_id) AS product_count
+               FROM categories c
+               LEFT JOIN products p ON p.category_id = c.category_id AND p.is_active = 1
+               WHERE c.status = 'active'
+               GROUP BY c.category_id
+               ORDER BY c.display_order ASC, c.is_featured DESC, c.name ASC";
+        $catStmt = $pdo->query($catSql);
         foreach ($catStmt->fetchAll() as $cRow) {
+            $cover = !empty($cRow['editorial_cover_url']) ? $cRow['editorial_cover_url'] : ($cRow['image'] ?? null);
             $categories[] = [
                 'category_id' => (int)$cRow['category_id'],
                 'parent_id' => $cRow['parent_id'] !== null ? (int)$cRow['parent_id'] : null,
@@ -170,8 +188,16 @@ try {
                 'slug' => (string)$cRow['slug'],
                 'description' => (string)($cRow['description'] ?? ''),
                 'image_url' => MelvoreResponse::mediaUrl($cRow['image'] ?? null),
+                'cover_image_url' => MelvoreResponse::mediaUrl($cover),
+                'motif_key' => (string)($cRow['motif_key'] ?? 'editorial_frame'),
+                'editorial_badge' => !empty($cRow['editorial_badge']) ? (string)$cRow['editorial_badge'] : null,
+                'editorial_subtitle' => !empty($cRow['editorial_subtitle']) ? (string)$cRow['editorial_subtitle'] : null,
+                'accent_hex' => (string)($cRow['accent_hex'] ?? '#141414'),
+                'bg_hex' => (string)($cRow['bg_hex'] ?? '#F8F7F4'),
+                'animation_key' => (string)($cRow['animation_key'] ?? 'zoom_reveal'),
+                'tile_span' => (string)($cRow['tile_span'] ?? 'regular'),
                 'is_featured' => ((int)($cRow['is_featured'] ?? 0)) === 1,
-                'display_order' => (int)($cRow['display_order'] ?? 0),
+                'display_order' => (int)($cRow['effective_order'] ?? ($cRow['display_order'] ?? 0)),
                 'product_count' => (int)($cRow['product_count'] ?? 0),
             ];
         }
@@ -353,21 +379,33 @@ try {
         }
     }
 
-    // 7. Promotional Banners (banner_content)
+    // 7. Promotional Banners (banner_content — column-resilient)
     $promoBanners = [];
     if (MelvoreDB::tableExists('banner_content')) {
-        $bnStmt = $pdo->query("SELECT * FROM banner_content WHERE is_active = 1 ORDER BY display_order ASC LIMIT 8");
+        $bnStmt = $pdo->query("SELECT * FROM banner_content");
         foreach ($bnStmt->fetchAll() as $br) {
+            $bActive = array_key_exists('is_active', $br)
+                ? ((int)$br['is_active'] === 1)
+                : (!array_key_exists('status', $br) || strtolower((string)$br['status']) === 'active');
+            if (!$bActive) {
+                continue;
+            }
             $promoBanners[] = [
                 'id' => (int)($br['banner_id'] ?? ($br['id'] ?? 0)),
                 'title' => (string)($br['title'] ?? ($br['heading'] ?? '')),
                 'subtitle' => (string)($br['subtitle'] ?? ($br['description'] ?? '')),
-                'badge_text' => (string)($br['badge_text'] ?? ''),
-                'image_url' => MelvoreResponse::mediaUrl($br['image_url'] ?? ($br['banner_image'] ?? null)),
+                'badge_text' => (string)($br['badge_text'] ?? ($br['tag'] ?? '')),
+                'image_url' => MelvoreResponse::mediaUrl($br['image_url'] ?? ($br['banner_image'] ?? ($br['image'] ?? null))),
                 'cta_text' => (string)($br['cta_text'] ?? 'Shop Edit'),
                 'cta_link' => (string)($br['cta_link'] ?? ''),
+                '_order' => (int)($br['display_order'] ?? ($br['sort_order'] ?? 0)),
             ];
         }
+        usort($promoBanners, static fn(array $a, array $b): int => ($a['_order'] <=> $b['_order']) ?: ($a['id'] <=> $b['id']));
+        $promoBanners = array_slice(array_map(static function (array $item): array {
+            unset($item['_order']);
+            return $item;
+        }, $promoBanners), 0, 8);
     }
 
     // 8. Brand Discovery Strip

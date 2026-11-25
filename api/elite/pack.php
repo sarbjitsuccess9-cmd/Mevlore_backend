@@ -211,6 +211,7 @@ try {
         $rawItems = $iStmt->fetchAll();
 
         $prodIds = array_values(array_unique(array_filter(array_map(static fn($r) => (int)($r['product_id'] ?? 0), $rawItems))));
+        $productsById = [];
         if (!empty($prodIds)) {
             $ph = implode(',', array_fill(0, count($prodIds), '?'));
             $ps = $pdo->prepare(
@@ -221,7 +222,17 @@ try {
                  WHERE p.product_id IN ($ph) AND p.is_active = 1"
             );
             $ps->execute($prodIds);
-            $products = MelvoreProductFormatter::formatRows($ps->fetchAll());
+            foreach (MelvoreProductFormatter::formatRows($ps->fetchAll()) as $fp) {
+                $productsById[(int)$fp['product_id']] = $fp;
+            }
+            // Preserve admin display_order cleanly
+            foreach ($rawItems as $it) {
+                $epid = !empty($it['product_id']) ? (int)$it['product_id'] : 0;
+                if ($epid > 0 && isset($productsById[$epid])) {
+                    $products[] = $productsById[$epid];
+                    unset($productsById[$epid]); // deduplicate
+                }
+            }
         }
 
         $brandIds = array_values(array_unique(array_filter(array_map(static fn($r) => (int)($r['brand_id'] ?? 0), $rawItems))));
@@ -241,17 +252,35 @@ try {
         }
 
         foreach ($rawItems as $it) {
+            $epid = !empty($it['product_id']) ? (int)$it['product_id'] : 0;
+            $itemType = (string)($it['item_type'] ?? 'product');
+            $matchedProd = null;
+            if ($epid > 0) {
+                foreach ($products as $pr) {
+                    if ((int)$pr['product_id'] === $epid) {
+                        $matchedProd = $pr;
+                        break;
+                    }
+                }
+            }
+            if ($itemType === 'product' && $matchedProd === null) {
+                continue;
+            }
+            $img = $itemType === 'product'
+                ? ($matchedProd['primary_image'] ?? null)
+                : MelvoreResponse::mediaUrl($it['image_url'] ?? null);
             $items[] = [
                 'item_id' => (int)$it['item_id'],
-                'item_type' => (string)($it['item_type'] ?? 'product'),
-                'title' => (string)($it['title'] ?? ''),
-                'subtitle' => (string)($it['subtitle'] ?? ''),
+                'item_type' => $itemType,
+                'title' => (string)(!empty($it['title']) ? $it['title'] : ($matchedProd['name'] ?? '')),
+                'subtitle' => (string)($it['subtitle'] ?? ($matchedProd['brand_name'] ?? '')),
                 'badge_text' => (string)($it['badge_text'] ?? ''),
-                'image_url' => MelvoreResponse::mediaUrl($it['image_url'] ?? null),
+                'image_url' => $img,
                 'video_url' => MelvoreResponse::mediaUrl($it['video_url'] ?? null),
                 'is_sponsored' => ((int)($it['is_sponsored'] ?? 0)) === 1,
-                'product_id' => !empty($it['product_id']) ? (int)$it['product_id'] : null,
+                'product_id' => $epid > 0 ? $epid : null,
                 'brand_id' => !empty($it['brand_id']) ? (int)$it['brand_id'] : null,
+                'product' => $matchedProd,
             ];
         }
     }
@@ -274,6 +303,8 @@ try {
             'animation_key' => (string)($pack['animation_key'] ?? 'metallic_shine'),
             'accent_color' => (string)($pack['accent_color'] ?? '#D4AF37'),
             'background_color' => (string)($pack['background_color'] ?? '#000000'),
+            'layout_type' => (string)($pack['layout_type'] ?? 'editorial_grid'),
+            'featured_product_id' => !empty($pack['featured_product_id']) ? (int)$pack['featured_product_id'] : null,
             'is_sponsored' => ((int)($pack['is_sponsored'] ?? 0)) === 1,
             'items' => $items,
         ],

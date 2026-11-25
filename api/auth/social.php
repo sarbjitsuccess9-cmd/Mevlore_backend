@@ -6,7 +6,7 @@ require_once dirname(__DIR__, 2) . '/includes/response.php';
 require_once dirname(__DIR__, 2) . '/includes/auth.php';
 require_once dirname(__DIR__, 2) . '/includes/rate_limit.php';
 require_once dirname(__DIR__, 2) . '/includes/user_formatter.php';
-require_once dirname(__DIR__, 2) . '/services/CartHelper.php';
+require_once dirname(__DIR__, 2) . '/services/SessionMergeService.php';
 
 MelvoreResponse::requireMethod('POST');
 MelvoreRateLimit::enforce('auth_social', 15, 300);
@@ -82,7 +82,7 @@ try {
 
     $guestId = MelvoreAuth::getGuestId();
     if ($guestId !== '') {
-        MelvoreCartHelper::mergeGuestCartToUser($pdo, $uid, $guestId);
+        MelvoreSessionMergeService::mergeGuestExperienceToUser($pdo, $uid, $guestId);
     }
 
     $token = MelvoreAuth::issueToken($uid, (string)($finalUser['password_hash'] ?? ''));

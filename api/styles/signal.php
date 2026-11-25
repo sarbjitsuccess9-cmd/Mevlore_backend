@@ -4,6 +4,7 @@ declare(strict_types=1);
 require_once dirname(__DIR__, 2) . '/includes/db.php';
 require_once dirname(__DIR__, 2) . '/includes/response.php';
 require_once dirname(__DIR__, 2) . '/includes/auth.php';
+require_once dirname(__DIR__, 2) . '/services/RecommendationService.php';
 
 MelvoreResponse::requireMethod('POST');
 
@@ -26,9 +27,10 @@ try {
         $signalType = 'style_tap';
     }
     $weight = match ($signalType) {
-        'wishlist_add' => 4.0,
+        'wishlist_add' => 5.0,
         'video_engage' => 3.0,
         'style_explore' => 2.5,
+        'product_view' => 2.0,
         default => 1.5,
     };
 
@@ -47,6 +49,7 @@ try {
             $signalType,
             $weight,
         ]);
+        MelvoreRecommendationService::invalidateForActor($pdo, $userId, $guestId);
     }
 
     MelvoreResponse::ok(['recorded' => true], 'Preference signal recorded');

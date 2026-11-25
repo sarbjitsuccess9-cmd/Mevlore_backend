@@ -10,7 +10,8 @@ MelvoreResponse::requireMethod('GET');
 try {
     $pdo = MelvoreDB::pdo();
     $worldSlug = trim((string)($_GET['world_slug'] ?? ''));
-    $default = MelvoreThemeEngineService::loadDefaultTheme();
+    $default = MelvoreThemeEngineService::loadDefaultTheme($pdo);
+    $resolvedDesign = MelvoreDesignSystemService::resolvePublishedManifest($pdo);
     $occasions = MelvoreThemeEngineService::fetchActiveOccasions(
         $pdo,
         trim((string)($_GET['country'] ?? 'India')),
@@ -30,9 +31,14 @@ try {
 
     MelvoreResponse::ok([
         'config_version' => MelvoreThemeEngineService::computeConfigVersion($pdo),
+        'active_design' => $resolvedDesign['active_design'],
+        'design_slot' => $resolvedDesign['resolved_slot'],
+        'design_version' => (string)($resolvedDesign['manifest']['design_version'] ?? '1.0.0'),
         'default_theme' => $default,
         'active_occasion' => $occasions[0] ?? null,
         'selected_world' => $selectedWorld,
+        'world_override' => $worldSlug !== '' ? ($resolvedDesign['manifest']['worlds'][strtolower($worldSlug)] ?? null) : null,
+        'layer_priority' => ['default_manifest', 'active_design_switch', 'style_world', 'active_occasion', 'component_override'],
     ], 'Active theme resolved');
 } catch (Throwable $e) {
     MelvoreResponse::error('Unable to resolve active theme.', 'SERVER_ERROR', 500);

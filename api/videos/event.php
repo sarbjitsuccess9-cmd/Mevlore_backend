@@ -4,6 +4,7 @@ declare(strict_types=1);
 require_once dirname(__DIR__, 2) . '/includes/db.php';
 require_once dirname(__DIR__, 2) . '/includes/response.php';
 require_once dirname(__DIR__, 2) . '/includes/auth.php';
+require_once dirname(__DIR__, 2) . '/services/RecommendationService.php';
 
 MelvoreResponse::requireMethod('POST');
 
@@ -82,6 +83,9 @@ try {
     }
 
     $pdo->commit();
+    if ($userId !== null || $guestId !== '') {
+        MelvoreRecommendationService::invalidateForActor($pdo, $userId, $guestId);
+    }
 
     MelvoreResponse::ok([
         'video_id' => $videoId,

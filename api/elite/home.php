@@ -11,14 +11,20 @@ try {
     $pdo = MelvoreDB::pdo();
 
     $packsTableExists = MelvoreDB::tableExists('app_elite_packs');
+    $hasStatusCol = $packsTableExists && MelvoreDB::columnExists('app_elite_packs', 'status');
+    $hasSchedCol = $packsTableExists && MelvoreDB::columnExists('app_elite_packs', 'scheduled_publish_at');
     $rawPacks = [];
     if ($packsTableExists) {
+        $statusWhere = $hasStatusCol ? " AND (status IS NULL OR status = 'published')" : '';
+        $schedWhere = $hasSchedCol ? ' AND (scheduled_publish_at IS NULL OR scheduled_publish_at <= NOW())' : '';
         $pStmt = $pdo->query(
-            'SELECT * FROM app_elite_packs
+            "SELECT * FROM app_elite_packs
              WHERE is_active = 1
+               $statusWhere
+               $schedWhere
                AND (start_date IS NULL OR start_date <= NOW())
                AND (end_date IS NULL OR end_date >= NOW())
-             ORDER BY is_hero DESC, display_order ASC, pack_id DESC'
+             ORDER BY is_hero DESC, display_order ASC, pack_id DESC"
         );
         $rawPacks = $pStmt->fetchAll();
     }
@@ -83,13 +89,22 @@ try {
             $pid = (int)($it['pack_id'] ?? 0);
             $prodObj = !empty($it['product_id']) ? ($productsMap[(int)$it['product_id']] ?? null) : null;
             $brandObj = !empty($it['brand_id']) ? ($brandsMap[(int)$it['brand_id']] ?? null) : null;
+            $itemType = (string)($it['item_type'] ?? ($prodObj ? 'product' : ($brandObj ? 'brand' : 'editorial')));
+            // Integrity guarantee: product items MUST render that exact product's primary catalog image
+            if ($itemType === 'product' && $prodObj === null) {
+                continue; // skip inactive/missing products cleanly
+            }
+            $resolvedImg = $itemType === 'product'
+                ? ($prodObj['primary_image'] ?? null)
+                : MelvoreResponse::mediaUrl($it['image_url'] ?? ($brandObj['logo_url'] ?? null));
+
             $itemsByPack[$pid][] = [
                 'item_id' => (int)($it['item_id'] ?? ($it['id'] ?? 0)),
-                'item_type' => (string)($it['item_type'] ?? ($prodObj ? 'product' : ($brandObj ? 'brand' : 'editorial'))),
-                'title' => (string)($it['title'] ?? ($prodObj['name'] ?? ($brandObj['name'] ?? ''))),
-                'subtitle' => (string)($it['subtitle'] ?? ''),
+                'item_type' => $itemType,
+                'title' => (string)(!empty($it['title']) ? $it['title'] : ($prodObj['name'] ?? ($brandObj['name'] ?? ''))),
+                'subtitle' => (string)($it['subtitle'] ?? ($prodObj['brand_name'] ?? '')),
                 'badge_text' => (string)($it['badge_text'] ?? ''),
-                'image_url' => MelvoreResponse::mediaUrl($it['image_url'] ?? ($prodObj['primary_image'] ?? ($brandObj['logo_url'] ?? null))),
+                'image_url' => $resolvedImg,
                 'video_url' => MelvoreResponse::mediaUrl($it['video_url'] ?? null),
                 'is_sponsored' => ((int)($it['is_sponsored'] ?? 0)) === 1,
                 'product' => $prodObj,
@@ -127,6 +142,8 @@ try {
             'animation_key' => (string)($rp['animation_key'] ?? 'metallic_shine'),
             'accent_color' => (string)($rp['accent_color'] ?? '#D4AF37'),
             'background_color' => (string)($rp['background_color'] ?? '#000000'),
+            'layout_type' => (string)($rp['layout_type'] ?? ($themeCfg['layout'] ?? 'editorial_grid')),
+            'featured_product_id' => !empty($rp['featured_product_id']) ? (int)$rp['featured_product_id'] : null,
             'is_hero' => ((int)($rp['is_hero'] ?? 0)) === 1,
             'is_sponsored' => ((int)($rp['is_sponsored'] ?? 0)) === 1,
             'theme_config' => $themeCfg,
