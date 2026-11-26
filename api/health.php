@@ -1,8 +1,11 @@
 <?php
 declare(strict_types=1);
 
-require_once dirname(__DIR__, 2) . '/includes/db.php';
-require_once dirname(__DIR__, 2) . '/includes/response.php';
+// Resolve the project root whether this file sits at the root or one level down.
+$MELVORE_ROOT = is_file(__DIR__ . '/includes/db.php') ? __DIR__ : (is_file(dirname(__DIR__) . '/includes/db.php') ? dirname(__DIR__) : dirname(__DIR__, 2));
+
+require_once $MELVORE_ROOT . '/includes/db.php';
+require_once $MELVORE_ROOT . '/includes/response.php';
 
 MelvoreResponse::requireMethod('GET');
 
